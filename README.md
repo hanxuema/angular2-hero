@@ -1,1 +1,1 @@
-Loading path for angular 2 Tour of Heroes
+Learning path for angular 2 Tour of Heroes
