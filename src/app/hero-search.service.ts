@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { Http } from "@angular/http";
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
 
-import { Observable } from "rxjs/observable";
+import { Observable } from 'rxjs/observable';
 import  'rxjs/add/operator/map';
 
-import { Hero } from "./hero";
+import { Hero } from './hero';
 
 @Injectable()
 export class HeroSearchService {
