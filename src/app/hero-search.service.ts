@@ -15,3 +15,4 @@ export class HeroSearchService {
                .map(response => response.json().data as Hero[]);
   }
 }
+//have to test github again :(
