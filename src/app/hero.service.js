@@ -11,15 +11,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-//There are many operators like toPromise that extend Observable with useful capabilities. To use those capabilities, you have to add the operators themselves. That's as easy as importing them from the RxJS library like this:
+// There are many operators like toPromise that extend Observable with useful capabilities. To use those capabilities, you have to add the operators themselves. That's as easy as importing them from the RxJS library like this:
 require("rxjs/add/operator/toPromise");
 var HeroService = (function () {
     function HeroService(http) {
         this.http = http;
-        this.heroesUrl = 'api/heroes'; //url to web api
         this.headers = new http_1.Headers({ 'content-Type': 'application/json' });
+        this.heroesUrl = 'api/heroes'; // url to web api
     }
-    //update a hero 
+    // update a hero 
     HeroService.prototype.update = function (hero) {
         var url = '${this.heroesUrl}/${hero.id}';
         return this.http

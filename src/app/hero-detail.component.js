@@ -9,12 +9,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require("rxjs/add/operator/switchMap");
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var common_1 = require("@angular/common");
-require("rxjs/add/operator/switchMap");
 var hero_service_1 = require("./hero.service");
-var hero_1 = require("./hero");
 var HeroDetailComponent = (function () {
     function HeroDetailComponent(heroService, route, location) {
         this.heroService = heroService;
@@ -37,10 +36,6 @@ var HeroDetailComponent = (function () {
     };
     return HeroDetailComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", hero_1.Hero)
-], HeroDetailComponent.prototype, "hero", void 0);
 HeroDetailComponent = __decorate([
     core_1.Component({
         selector: 'hero-detail',

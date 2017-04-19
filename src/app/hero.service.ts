@@ -1,17 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
-//There are many operators like toPromise that extend Observable with useful capabilities. To use those capabilities, you have to add the operators themselves. That's as easy as importing them from the RxJS library like this:
+// There are many operators like toPromise that extend Observable with useful capabilities. To use those capabilities, you have to add the operators themselves. That's as easy as importing them from the RxJS library like this:
 import 'rxjs/add/operator/toPromise';
 import { Hero } from './hero';
 
 @Injectable()
 export class HeroService {
-    private heroesUrl = 'api/heroes';//url to web api
+
     private headers = new Headers({ 'content-Type': 'application/json' });
+    private heroesUrl = 'api/heroes';// url to web api
     constructor(private http: Http) { }
 
-    //update a hero 
+    // update a hero 
     update(hero: Hero): Promise<Hero> {
         const url = '${this.heroesUrl}/${hero.id}';
         return this.http
