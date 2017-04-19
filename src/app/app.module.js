@@ -11,7 +11,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms"); // <-- NgModel lives here
 var http_1 = require("@angular/http");
 var app_routing_module_1 = require("./app-routing.module");
-//imports for loading & configuring the in-memory web aip
+// imports for loading & configuring the in-memory web aip
 var angular_in_memory_web_api_1 = require("angular-in-memory-web-api");
 var in_memory_data_service_1 = require("./in-memory-data.service");
 var app_component_1 = require("./app.component");
@@ -19,6 +19,7 @@ var dashboard_component_1 = require("./dashboard.component");
 var heroes_component_1 = require("./heroes.component");
 var hero_detail_component_1 = require("./hero-detail.component");
 var hero_service_1 = require("./hero.service");
+var hero_search_component_1 = require("./hero-search.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -37,7 +38,8 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             dashboard_component_1.DashboardComponent,
             hero_detail_component_1.HeroDetailComponent,
-            heroes_component_1.HeroesComponent
+            heroes_component_1.HeroesComponent,
+            hero_search_component_1.HeroSearchComponent
         ],
         providers: [hero_service_1.HeroService],
         bootstrap: [app_component_1.AppComponent]

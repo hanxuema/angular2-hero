@@ -28,5 +28,5 @@ HeroSearchService = __decorate([
     __metadata("design:paramtypes", [http_1.Http])
 ], HeroSearchService);
 exports.HeroSearchService = HeroSearchService;
-// have to test github again :( 
+// have to test github again :(
 //# sourceMappingURL=hero-search.service.js.map
