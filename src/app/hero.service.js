@@ -21,7 +21,7 @@ var HeroService = (function () {
     }
     // update a hero 
     HeroService.prototype.update = function (hero) {
-        var url = '${this.heroesUrl}/${hero.id}';
+        var url = this.heroesUrl + "/" + hero.id;
         return this.http
             .put(url, JSON.stringify(hero), { headers: this.headers })
             .toPromise()
@@ -38,7 +38,7 @@ var HeroService = (function () {
     };
     //delete a hero from web api
     HeroService.prototype.delete = function (id) {
-        var url = '${this.heroesUrl}/${id}';
+        var url = this.heroesUrl + "/" + id;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(function () { return null; })
@@ -46,7 +46,7 @@ var HeroService = (function () {
     };
     //get single hero by id from web api
     HeroService.prototype.getHero = function (id) {
-        var url = '${this.heroesUrl}/${id}';
+        var url = this.heroesUrl + "/" + id;
         return this.http.get(url)
             .toPromise()
             .then(function (response) { return response.json().data; })

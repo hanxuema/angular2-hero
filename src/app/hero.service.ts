@@ -9,12 +9,12 @@ import { Hero } from './hero';
 export class HeroService {
 
     private headers = new Headers({ 'content-Type': 'application/json' });
-    private heroesUrl = 'api/heroes';// url to web api
+    private heroesUrl = 'api/heroes'; // url to web api
     constructor(private http: Http) { }
 
     // update a hero 
     update(hero: Hero): Promise<Hero> {
-        const url = '${this.heroesUrl}/${hero.id}';
+        const url = `${this.heroesUrl}/${hero.id}`;
         return this.http
             .put(url, JSON.stringify(hero), { headers: this.headers })
             .toPromise()
@@ -33,7 +33,7 @@ export class HeroService {
 
     //delete a hero from web api
     delete(id: number): Promise<void> {
-        const url = '${this.heroesUrl}/${id}';
+        const url = `${this.heroesUrl}/${id}`;
         return this.http.delete(url, { headers: this.headers })
             .toPromise()
             .then(() => null)
@@ -42,7 +42,7 @@ export class HeroService {
 
     //get single hero by id from web api
     getHero(id: number): Promise<Hero> {
-        const url = '${this.heroesUrl}/${id}';
+        const url = `${this.heroesUrl}/${id}`;
         return this.http.get(url)
             .toPromise()
             .then(response => response.json().data as Hero)
