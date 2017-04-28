@@ -63,8 +63,7 @@ export class HeroService {
         return new Promise(resolve => {
             //simulate server latency with 2 second delay
             setTimeout(() => resolve(this.getHeroes()), 2000);
-        })
-
+        });
     }
 
     private handleError(error: any): Promise<any> {
