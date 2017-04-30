@@ -1,7 +1,7 @@
 {
   "name": "angular-io-example",
   "version": "1.0.0",
-  "engines": {"node": "7.8.0"} ,
+  "engines": {"node": "7.7.4"} ,
   "private": true,
   "description": "Example project from an angular.io guide.",
   "scripts": {
